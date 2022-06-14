@@ -1,12 +1,11 @@
 let feedbackCard = document.querySelector('.feedback-card-rating');
-let feedbackCardWidth = feedbackCard.Width;
+let feedbackCardWidth = feedbackCard.offsetWidth;
+let Finalwidth = Number(feedbackCardWidth)-100;
 
-document.querySelector(".feedback-card-rating").style.height = feedbackCardWidth+"px";
+document.querySelector(".feedback-card-rating").style.height = Finalwidth+"px";
 
 let feedbackCardInputRadio = document.querySelector('.radio-rating');
 let feedbackCardWidthInputRadio = feedbackCardInputRadio.offsetWidth;
-
-document.querySelector(".radio-rating").style.height = feedbackCardWidthInputRadio+"px";
 
 var RadioHeight = document.getElementsByClassName("radio-rating");
 
