@@ -16,18 +16,19 @@ body p {
 }
 
 #wrapper {
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1.5rem;
-    align-items: center;
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    width: 400px;
+    transform: translate(0,-50%);
 }
 
 .feedback-card-rating {
+    position: absolute;
     background-image: linear-gradient( 180deg, hsl(213, 19%, 18%), hsl(213, 19%, 12%));
     border-radius: 50px;
-    grid-column: 3 / span 2;
     padding: 50px;
+    width: 100%;
 }
 
 .feedback-card-rating h1 {
@@ -36,6 +37,7 @@ body p {
 
 .feedback-card-rating p {
     color: hsl(217, 12%, 63%);
+    line-height: 20px;
 }
 
 .feedback-card-rating .icons {
@@ -50,9 +52,9 @@ body p {
 .feedback-card-rating form {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    margin-top: 2rem;
-    gap: 2rem;
-    row-gap: 2rem;
+    margin-top: 2.5rem;
+    gap: 1.5rem;
+    row-gap: 2.5rem;
     align-items: center;
     align-content: center;
     justify-content: center;
@@ -126,5 +128,39 @@ body p {
 }
 
 .feedback-card-state {
-    display: none;
+    position: absolute;
+    background-image: linear-gradient( 180deg, hsl(213, 19%, 18%), hsl(213, 19%, 12%));
+    border-radius: 50px;
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.feedback-card-state svg {
+    display: block;
+    margin: 20px auto 60px auto;
+}
+
+.feedback-card-state .rating-choice {
+    margin: 0 auto 30px auto;
+    display: inline-block;
+    background-color: rgba(255,255,255,.1);
+    padding: 10px 15px;
+    border-radius: 50px;
+    color: hsl(25, 97%, 53%);
+}
+
+.feedback-card-state h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.feedback-card-state p {
+    color: hsl(217, 12%, 63%);
+    line-height: 20px;
+    text-align: center;
 }
