@@ -8,7 +8,7 @@
 body {
     background-color: hsl(216, 12%, 8%);
     font-family: Overpass, sans-serif;
-    height: 90vh;
+    height: 100vh;
 }
 
 body p {
@@ -18,9 +18,9 @@ body p {
 #wrapper {
     position: relative;
     top: 50%;
+    transform: translateY(-50%);
     margin: 0 auto;
     width: 400px;
-    transform: translate(0,-50%);
 }
 
 .feedback-card-rating {
@@ -29,6 +29,12 @@ body p {
     border-radius: 50px;
     padding: 50px;
     width: 100%;
+    transition: all 1s ease;
+}
+
+.feedback-card-rating.flip {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
 }
 
 .feedback-card-rating h1 {
@@ -137,6 +143,14 @@ body p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.feedback-card-state.flip {
+    transform: rotateY(0deg);
 }
 
 .feedback-card-state svg {
