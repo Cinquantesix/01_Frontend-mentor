@@ -1,6 +1,4 @@
 let sizeCard = document.querySelector('.feedback-card-rating');
-let SizeCardWrapper = sizeCard.offsetWidth;
-document.getElementById("wrapper").style.height = SizeCardWrapper+"px";
 
 let feedbackCardInputRadio = document.querySelector('.radio-rating');
 let feedbackCardWidthInputRadio = feedbackCardInputRadio.offsetWidth;
